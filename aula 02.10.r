@@ -277,5 +277,3 @@ minha_lista[[2]]$nome
 minha_lista$nova_lista <- list(novo_vetor = c(1, 2, 3), nova_matriz = matrix(1:4, nrow = 2))
 
 minha_lista
-
-minha_lista
