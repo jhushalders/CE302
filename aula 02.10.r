@@ -131,29 +131,117 @@ head(Queimadas, 9)
 tail(Queimadas, 3)
 
 #3 Quantas observações temos?
-
+nrow(Queimadas)
 
 #4 Quantas variáveis temos?
-
+ncol(Queimadas)
 
 #5 Apresente o sumário dos dados.
 summary(Queimadas)
 
 #6 Apresente a estrutura dos dados.
-
+str(Queimadas)
 
 #7 Quantos biomas estão sendo afetados?
 
+unique(Queimadas$bioma)
+length(unique(Queimadas$bioma))
+Queimadas$bioma = factor(Queimadas$bioma)
+nlevels(Queimadas$bioma)
+levels(Queimadas$bioma)
 
 #8 Qual a média de avg_numero_dias_sem_chuva para os estados da região sul e da região norte?
-mean(Queimadas$avg_numero_dias_sem_chuva, estado == "AMAZONAS")
+Estados_Sul = toupper(c("Paraná", "Santa Catarina", "Rio Grande do Sul"))
+estados_norte <-toupper(c("Acre", "Amapá", "Amazonas", "Pará", "Paraíba", "Rondônia", "Roraima", "Tocantins"))
 
 
+Queimadas_sul = subset(Queimadas,
+                       estado %in% Estados_Sul)
+mean (Queimadas_sul$avg_numero_dias_sem_chuva)
+
+Queimadas_norte = subset(Queimadas,
+                         estado %in% estados_norte)
+mean (Queimadas_norte$avg_numero_dias_sem_chuva)
 
 
+#DATA.TABLE = MAIS RÁPIDO
+#Uma das características principais do “data.table” é sua sintaxe otimizada. 
+#A operação básica do “data.table” usa a notação [i, j, by], 
+#onde i filtra linhas, j seleciona colunas e by agrupa resultados. 
+#Isso permite que você realize várias operações complexas em uma única linha de código.
+# Criar um data.table
+require(data.table)
+meu_data_table <- data.table(
+  nome = c("Alice", "Bob", "Carol", "Ana", "João", "Carlos", "Patrícia", "Leonardo"),
+  idade = c(25, 30, 28, 20, 27, 50, 60, 45),
+  salario = c(5000, 6000, 5500, 8000, 2000, 3500, 10000, 3800 ), 
+  meio_de_transporte = c('onibus', 'bicicleta', 'onibus', 'carro', 'carro', 'onibus', 'onibus', 'bicicleta'))
 
+class(meu_data_table)
 
+# Selecionar colunas e filtrar linhas
+resultado <- meu_data_table[idade > 25, .(nome, salario)]
+resultado
 
+# Agregar dados, criar variáveis
+agregado<- meu_data_table[, .(media_salario = mean(salario)),]
+agregado
+
+# Agregar dados por idade
+agregado_idade <- meu_data_table[, .(media_salario = mean(salario)), by = idade]
+agregado_idade
+
+# Agregar dados por meio_de_transporte
+  agregado_mt <- meu_data_table[, .(media_salario = mean(salario)), by = meio_de_transporte]
+agregado_mt
+
+#TIBBLE - colocar nome com espaços, no meio de crases  `meio de transporte` 
+require(tibble)
+require(magrittr)
+require(dplyr)
+meu_tibble <- tibble(
+  nome = c("Alice", "Bob", "Carol", "Ana", "João", "Carlos", "Patrícia", "Leonardo"),
+  idade = c(25, 30, 28, 20, 27, 50, 60, 45),
+  salario = c(5000, 6000, 5500, 8000, 2000, 3500, 10000, 3800 ), 
+  meio_de_transporte = c('onibus', 'bicicleta', 'onibus', 'carro', 'carro', 'onibus', 'onibus', 'bicicleta'))
+meu_tibble
+str(meu_tibble)
+glimpse(meu_tibble)
+
+#add colunas
+meu_tibble$nova_coluna <- c(1, 2, 3, 4, 5, 6, 7, 8)
+meu_tibble
+
+meu_tibble <- mutate(meu_tibble, `minha coluna` = 1:8)
+meu_tibble
+
+#renomear coluna
+meu_tibble <-  rename(meu_tibble, idade_anos = idade)
+meu_tibble
+
+#selecionar e remover
+meu_tibble_sem_salario <- select(meu_tibble, -salario)
+meu_tibble_sem_salario
+
+#só uma coluna
+meu_tibble_so_salario <- select(meu_tibble, salario)
+meu_tibble_so_salario
+
+#tranformando em vetor
+salario = pull (meu_tibble, salario)
+salario
+
+# Filtrar e ordenar
+resultado <- filter(meu_tibble, idade_anos > 25) 
+arrange(resultado, desc(salario))
+
+# Agregar por idade e calcular média de salários
+agregado_por_idade <-  group_by(meu_tibble, idade_anos) 
+agregado_por_idade
+
+summarize(agregado_por_idade, media_salario = mean(salario))
+
+#LISTAS, qualuer tipo de objeto
 
 
 
