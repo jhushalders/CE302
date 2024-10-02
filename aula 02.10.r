@@ -242,9 +242,40 @@ agregado_por_idade
 summarize(agregado_por_idade, media_salario = mean(salario))
 
 #LISTAS, qualuer tipo de objeto
+# Exemplo de criação de lista
 
+minha_lista <- list(
+  vetor = c(1, 2, 3, 4, 5),
+  matriz = matrix(1:9, nrow = 3),
+  data_frame = data.frame(
+    nome = c("Alice", "Bob", "Carol"),
+    idade = c(25, 30, 28)
+  ),
+  lista_aninhada = list(
+    vetor_aninhado = c(10, 20, 30),
+    matriz_aninhada = matrix(1:4, nrow = 2)
+  )
+)
+minha_lista
 
+# Acessar elementos da lista
 
+elemento1 <- minha_lista[[1]]  # Acessar o primeiro elemento
+elemento1 
 
+elemento2 <- minha_lista$data_frame  # Acessar o data frame
+elemento2
 
+elemento3 <- minha_lista$lista_aninhada$vetor_aninhado  # Acessar o vetor aninhado
+elemento3
 
+minha_lista[[2]]
+minha_lista[[2]]$nome
+
+# Adicionar elementos a uma lista
+
+minha_lista$nova_lista <- list(novo_vetor = c(1, 2, 3), nova_matriz = matrix(1:4, nrow = 2))
+
+minha_lista
+
+minha_lista
