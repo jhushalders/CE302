@@ -1,0 +1,105 @@
+---
+title: "Lista de Markdown"
+output: html_document
+date: "2024-10-31"
+---
+
+# Título de nível 1 - Parágrafo sobre Günter Grass {#sec-01}
+
+Quando **Günter Grass** cria a personagem de *Oskar Matzerath*, ele tem a intenção de, a partir de uma figura ambígua e pícara, dissecar a sociedade prussiana/alemã em vias de presenciar a ascensão do ***Partido Nazista***.
+
+Os grandes livros de Günter Grass são:
+
+-   O Tambor
+-   Anos de Cão
+-   Gato e Rato
+
+Na minha ordem de preferência:
+
+1.  O Tambor
+2.  Anos de Cão
+3.  Gato e Rato
+
+Para mais informações, é recomendado que você faça uma pesquisa no [Google.com](google.com)
+
+Para você reconhecer o rosto de Günter Gras: ![O jovem-velho Günter Grass](https://www.ndr.de/kultur/buch/grasssechzigerjahre2_v-contentgross.jpg)
+
+![Günter Grass](C:/Users/anton/Desktop/Área%20de%20Trabalho/Estatística/CE302/CE302---Elementos-de-Prog-para-Estat-stica/Günter_Grass_auf_dem_Blauen_Sofa)
+
+Citação:
+
+> **Das immerhin leistet die Literatur: Sie schaut nicht weg, sie vergißt nicht, sie bricht das Schweigen.** *É isso que a literatura faz todavia: ela não desvia o olhar, não se esquece, ela rompe o silêncio.* Günter Grass sobre a literatura em entrevista à revista 'Der Spiegel' (tradução livre feita por mim).
+
+## Seção 2 - Personagens de 'O Tambor' {#sec-02}
+
+------------------------------------------------------------------------
+
+Seções de tarefas divididas em uma lista aninhada:
+
+-   Agora vamos falar sobre outros temas, caso queira retornar à seção sobre o autor Günter Grass, [clique aqui](#sec-01)
+
+    -   Sobre as personagens do romance "O Tambor", podemos listar as principais logo abaixo:
+
+| Nome   | Idade        | Profissão            |
+|--------|--------------|----------------------|
+| Oskar  | Desconhecida | Narrador e malandrão |
+| Agnes  | 30           | Lojista              |
+| Alfred | 40           | Lojista              |
+| Jan    | 30~40       | Livreiro             |
+
+-   Para fazer a lista pedida originalmente:
+
+| Itens    | Quantidade |
+|----------|------------|
+| Maçãs    | 5          |
+| Bananas  | 3          |
+| Laranjas | 8          |
+
+------------------------------------------------------------------------
+
+## Bloco de código em R seguida do código inline
+
+```{r}
+soma_aleatória <- 2+3+58
+
+```
+
+O resultado da soma aleatória é: `r soma_aleatória`.
+
+## Outras Funcionalidades
+
+É muito interessante de se notar como Günter Grass caminha na direção da crítica direta ao regime recém caído, enquanto outros autores, como Heinrich Böll, encontraram outros caminhos. [^1]
+
+[^1]: Böll, como outros representantes da Alemanha ocidental, refugia-se no discurso religioso, em oposição a Grass, sempre calcado na materialidade.
+
+-   [ ] Ler "O Tambor";
+-   [ ] Ler "Anos de cão";
+-   [ ] Ler "Gato e Rato".
+
+Uma citação tocante do romance "Anos de Cão":
+
+> Es war einmal ein Hund, der gehörte dem Führer und REichskanzler und war dessen Lieblingshund. Eines Tages lief dieser Hund dem Führer davon. Warum wohl? (Grass, G. *Hundejahre*, p. 461)
+
+Um entrevista muito interessante com o autor está disponível no antigo site do [El País Brasil](https://brasil.elpais.com/brasil/2015/04/13/cultura/1428918239_167030.html).
+
+### Como fazer dinheiro de mentira:
+
+1.  Tingindo papel:
+
+-   1.1 - Misture água e café numa tigela. Isso será utilizado para tingir o papel e dar ao dinheiro uma aparência de bastante usado. Use 3 colheres (sopa) de café, embora essa medida não faça muita diferença. Uma ideia bacana é acrescentar algumas gotas de corante alimentício da cor da nota — por exemplo, azul para uma nota de cem reais. Uma opção é trocar o café por chá. Faça um bule de chá preto (não importa o tipo, contanto que seja dessa cor). Deixe em infusão por mais tempo do que o normal (cinco minutos ou mais). Dessa forma, ele ficará mais escuro.
+-   1.2 - Mergulhe o papel ofício na água. Cubra ambos os lados para que a cor do dinheiro fique mais uniforme. No entanto, seja rápido para que o papel não rasgue.
+-   1.3 - Coloque as folhas de papel num prato que possa ir ao micro-ondas. Os pedaços não podem se sobrepor, portanto pegue uma folha por vez. Leve ao micro-ondas por 20 segundos. Tire e veja se ainda está úmido. Se estiver, aqueça por mais 20 segundos. Se não quiser usar o micro-ondas, deixe o papel secar naturalmente. Para isso, coloque numa superfície que possa ser molhada (uma assadeira, por exemplo). Outra opção é pendurar no varal.
+
+2.  Acrescentando detalhes:
+
+-   2.1 - Há duas formas de fazer o dinheiro de mentira: imprimir ou desenhar. Ainda que a impressão seja mais realista, há certos limites. Afinal, você não quer fazer nada ilegal, não é? Imprima apenas num lado do papel e use uma imagem bem maior ou bem menor do que o dinheiro real. Para imprimir o dinheiro de mentira: Coloque as folhas de papel na impressora. Selecione a imagem e imprima. Não se esqueça de que ela não pode ser do tamanho real. Utilize a busca do wikiHow para encontrar artigos que ensinem a como dimensionar imagens. Para desenhar os detalhes: Use uma nota verdadeira como referência. Contorne-a no papel para que o tamanho fique certo. Faça os detalhes da parte frontal do dinheiro.
+-   2.2 - Crie várias cópias. Para duplicar o dinheiro desenhado, use um escâner. No dinheiro impresso, basta imprimir várias vezes. Se esquecer de colocar o papel tingido na impressora, faça os processos de tingimento e secagem após imprimir. No entanto, fique sabendo que a tinta pode borrar.
+-   2.3 - Recorte as notas com uma tesoura. Para garantir cortes mais retos, use uma guilhotina de papel.
+
+E o tutorial segue...
+
+Vídeo do Youtube: ![DEscendents - Hope](https://www.youtube.com/watch?v=qOHEfVQFs2Q) {width="560" height="315"}
+
+Não sabia se era para ser ~~taxado~~ ou sublinhado
+
+Não fiz a lista completa :(
